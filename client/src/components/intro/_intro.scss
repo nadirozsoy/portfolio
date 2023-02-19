@@ -1,0 +1,64 @@
+.intro {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .left {
+    justify-self: center;
+    align-self: center;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 65rem;
+      height: 65rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+      display: grid;
+      align-items: end;
+      justify-items: center;
+
+      img {
+        width: 90%;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .right {
+    .wrapper {
+      width: 100%;
+      height: 70vh;
+      padding-left: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 6rem;
+        margin: 1rem 0;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+      }
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    a {
+      img {
+        margin-left: 20%;
+        width: 3rem;
+        height: 3rem;
+        animation: blink 1.5s infinite;
+      }
+    }
+  }
+}
