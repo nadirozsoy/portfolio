@@ -1,0 +1,92 @@
+.topbar {
+  width: 100%;
+  height: 7rem;
+  background-color: white;
+  color: $color-primary;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: $transition-1;
+
+  .wrapper {
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 4rem;
+        font-weight: 700;
+        color: currentColor;
+        margin-right: 4rem;
+      }
+
+      .itemContainer {
+        display: flex;
+        align-items: center;
+
+        &:not(:first-of-type) {
+          margin-left: 3rem;
+        }
+
+        .icon {
+          font-size: 1.8rem;
+          margin-right: 0.5rem;
+        }
+
+        span {
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .right {
+      .hamburger {
+        width: 3.2rem;
+        height: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $color-primary;
+          transform-origin: left;
+          transition: $transition-1;
+          margin-left: 0.4rem;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $color-primary;
+    color: #fff;
+    transition: $transition-1;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: #fff;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          background-color: #fff;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
