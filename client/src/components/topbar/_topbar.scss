@@ -7,6 +7,7 @@
   top: 0;
   z-index: 1000;
   transition: $transition-1;
+  box-shadow: $shadow-1;
 
   .wrapper {
     padding: 1rem 3rem;
@@ -23,6 +24,13 @@
         font-weight: 700;
         color: currentColor;
         margin-right: 4rem;
+        transition: $transition-3;
+
+        &:hover {
+          color: $color-primary;
+          transform: scale(1.02);
+          text-shadow: 0.5rem 1rem 1rem rgba(198, 153, 99, 0.2);
+        }
       }
 
       .itemContainer {
@@ -34,8 +42,16 @@
         }
 
         .icon {
-          font-size: 1.8rem;
+          font-size: 2rem;
           margin-right: 0.5rem;
+          cursor: pointer;
+          transition: $transition-3;
+
+          &:hover {
+            color: $color-primary;
+            transform: scale(1.02);
+            text-shadow: 0.5rem 1rem 1rem rgba(198, 153, 99, 0.2);
+          }
         }
 
         span {
@@ -87,6 +103,12 @@
           background-color: #fff;
           transform: rotate(-45deg);
         }
+      }
+    }
+
+    .logo {
+      &:hover {
+        color: #fff !important;
       }
     }
   }

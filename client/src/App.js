@@ -1,15 +1,17 @@
 import Topbar from './components/topbar/Topbar'
 import Intro from './components/intro/Intro'
-import Portfolio from './components/portfolio/Porfolio'
+import Portfolio from './components/portfolio/Portfolio'
 import Works from './components/works/Works'
 import Testimonials from './components/testimonials/Testimonials'
 import Contact from './components/contact/Contact'
 import './scss/main.scss'
 import { useState } from 'react'
 import Menu from './components/menu/Menu'
+import Loader from './components/loader/Loader'
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   return (
     <div className="app">
@@ -23,7 +25,7 @@ const App = () => {
       />
       <div className="sections">
         <Intro />
-        <Portfolio />
+        {isLoading ? <Loader /> : <Portfolio />}
         <Works />
         <Testimonials />
         <Contact />
