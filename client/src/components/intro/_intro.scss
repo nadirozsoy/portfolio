@@ -53,12 +53,17 @@
     }
 
     a {
-      img {
-        margin-left: 20%;
-        width: 3rem;
-        height: 3rem;
-        animation: blink 1.5s infinite;
-      }
+      margin-left: 20%;
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      animation: blink 1.5s infinite;
+      background-color: $color-primary;
+      -webkit-mask-image: url(../../../public/assets/img/down.png);
+      -webkit-mask-size: cover;
+      mask-image: url(../../../public/assets/img/down.png);
+      mask-size: cover;
+      background-size: cover;
     }
   }
 }

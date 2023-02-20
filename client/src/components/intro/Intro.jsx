@@ -39,9 +39,7 @@ export default function Intro() {
                     <h3>Front-End <span ref={el}></span>
                     </h3>
                 </div>
-                <a href="#portfolio">
-                    <img src="assets/img/down.png" alt="down" />
-                </a>
+                <a href="#portfolio"></a>
             </div>
         </div>
     )
