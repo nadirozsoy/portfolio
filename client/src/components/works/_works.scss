@@ -1,3 +1,110 @@
 .works {
-  background-color: lightsalmon;
+  background-color: $color-primary-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .arrow {
+    height: 5rem;
+    position: absolute;
+    cursor: pointer;
+
+    &.left {
+      left: 10rem;
+      transform: rotate(-180deg);
+    }
+
+    &.right {
+      right: 10rem;
+    }
+  }
+
+  .slider {
+    height: 50rem;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+
+    .container {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .item {
+        width: 70rem;
+        height: 80%;
+        // height: 100%;
+
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-primary;
+        box-shadow: $shadow-1;
+
+        .left {
+          flex: 4;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .leftContainer {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #fff;
+
+            .imgContainer {
+              width: 4rem;
+              height: 4rem;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #fff;
+
+              img {
+                width: 2.5rem;
+              }
+            }
+
+            h2 {
+              font-size: 2rem;
+            }
+
+            p {
+              font-size: 1.3rem;
+            }
+
+            span {
+              font-size: 1.2rem;
+              font-weight: bold;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .right {
+          flex: 9;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          img {
+            width: 40rem;
+            transform: rotate(-10deg);
+          }
+        }
+      }
+    }
+  }
 }

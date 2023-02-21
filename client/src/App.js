@@ -7,11 +7,9 @@ import Contact from './components/contact/Contact'
 import './scss/main.scss'
 import { useState } from 'react'
 import Menu from './components/menu/Menu'
-import Loader from './components/loader/Loader'
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
 
   return (
     <div className="app">
@@ -25,7 +23,7 @@ const App = () => {
       />
       <div className="sections">
         <Intro />
-        {isLoading ? <Loader /> : <Portfolio />}
+        <Portfolio />
         <Works />
         <Testimonials />
         <Contact />

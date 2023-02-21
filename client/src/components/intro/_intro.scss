@@ -37,6 +37,7 @@
       h1 {
         font-size: 6rem;
         margin: 1rem 0;
+        text-shadow: $shadow-2;
       }
 
       h2 {
@@ -49,6 +50,7 @@
 
       span {
         color: $color-primary;
+        text-shadow: $shadow-2;
       }
     }
 

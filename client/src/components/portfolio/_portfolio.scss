@@ -20,13 +20,14 @@
       padding: 1rem;
       border-radius: 100px;
       cursor: pointer;
+      text-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.4);
 
       &:not(:last-child) {
         margin-right: 5rem;
       }
 
       &.active {
-        background-color: $color-secondary;
+        background-color: $color-primary;
         color: #fff;
       }
     }
@@ -35,13 +36,14 @@
   .container {
     width: 60%;
     height: 80%;
-
+    border-radius: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 5rem;
     justify-items: center;
     align-items: center;
     margin: auto;
+    box-shadow: $shadow-1;
 
     .item {
       border-radius: 20px;
@@ -83,7 +85,6 @@
       }
 
       &:hover img {
-        background-color: red;
         filter: blur(3px) brightness(80%);
       }
     }

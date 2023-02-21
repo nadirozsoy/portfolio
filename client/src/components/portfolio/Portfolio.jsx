@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import supabase from '../../database/supabase'
 import PortfolioList from './portfolioList/PortfolioList'
-
+import { motion } from "framer-motion"
 
 export default function Portfolio() {
     const [selected, setSelected] = useState("all")
 
-    const [datas, setDatas] = useState([])
+    const [content, setContent] = useState([])
     const list = [
         {
             id: "featured",
@@ -35,8 +35,8 @@ export default function Portfolio() {
             let query = supabase.from('portfolio').select('*')
             if (selected !== "all")
                 query = query.eq('category', selected)
-            const { data: datas, error } = await query
-            if (!error) setDatas(datas)
+            const { data: content, error } = await query
+            if (!error) setContent(content)
             else alert('There was a problem getting data')
         }
         getFeatured()
@@ -61,13 +61,16 @@ export default function Portfolio() {
                         id={item.id}
                     />
                 )}
+
             </ul>
             <div className="container">
-                {datas.map((d) => (
-                    <figure className="item">
+                {content.map((d) => (
+                    <motion.div animate={{ rotate: 360 }}
+                        transition={{ repeat: Infinity, duration: 5 }}
+                        key={d.id} className="item">
                         <img src={d.img} alt="" />
                         <figcaption>{d.title}</figcaption>
-                    </figure>
+                    </motion.div>
                 ))}
             </div>
 
