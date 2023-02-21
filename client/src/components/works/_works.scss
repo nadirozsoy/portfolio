@@ -36,13 +36,11 @@
       .item {
         width: 70rem;
         height: 80%;
-        // height: 100%;
-
         border-radius: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $color-primary;
+        background-color: $color-secondary;
         box-shadow: $shadow-1;
 
         .left {

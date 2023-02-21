@@ -1,3 +1,90 @@
 .testimonials {
-  background-color: lightgreen;
+  // background-color: $color-secondary;
+  // color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 5rem;
+    font-weight: 900;
+  }
+
+  .container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+      width: 35rem;
+      height: 80%;
+      border-radius: 10px;
+      box-shadow: $shadow-1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 2rem;
+      transition: $transition-3;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &.featured {
+        height: 85%;
+      }
+
+      &:not(:last-child) {
+        margin-right: 5rem;
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          &.left,
+          &.right {
+            height: 5rem;
+            cursor: pointer;
+          }
+
+          &.user {
+            height: 20rem;
+            width: 20rem;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .center {
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+          font-size: 3.5rem;
+          // font-weight: bold;
+        }
+        h4 {
+          font-size: 2rem;
+          font-weight: 400;
+          color: $color-primary;
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,4 @@
 .intro {
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -21,6 +20,7 @@
         width: 90%;
         overflow: hidden;
         border-radius: 50%;
+        box-shadow: $shadow-1;
       }
     }
   }
