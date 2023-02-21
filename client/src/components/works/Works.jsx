@@ -16,6 +16,8 @@ export default function Works() {
                 query = query.eq('cSlide', 1)
             else if (currentSlide === 2)
                 query = query.eq('cSlide', 2)
+            else if (currentSlide === 3)
+                query = query.eq('cSlide', 3)
             const { data: content, error } = await query
             if (!error) setContent(content)
             else alert('There was a problem getting data')
@@ -25,8 +27,8 @@ export default function Works() {
 
     const handleClick = (way) => {
         way === "left"
-            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
-            : setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
+            : setCurrentSlide(currentSlide < 4 ? currentSlide + 1 : 0)
     }
 
     return (
