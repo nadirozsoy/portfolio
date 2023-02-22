@@ -11,12 +11,25 @@
   h2 {
     font-size: 5rem;
     font-weight: 900;
+
+    @media only screen and (max-width: $bp-sm-2) {
+      height: 7rem;
+    }
   }
 
   ul {
     margin: 1rem;
     list-style: none;
     display: flex;
+
+    @media only screen and (max-width: $bp-md-2-2) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-sm-2) {
+      height: 14rem;
+    }
 
     li {
       font-size: 2rem;
@@ -28,6 +41,14 @@
 
       &:not(:last-child) {
         margin-right: 5rem;
+
+        @media only screen and (max-width: $bp-md-2-2) {
+          margin-right: 2rem;
+        }
+      }
+
+      @media only screen and (max-width: $bp-sm-2) {
+        margin-bottom: 2rem;
       }
 
       &.active {
@@ -39,11 +60,11 @@
 
   .container {
     width: 60%;
-    height: 80%;
+    height: 75%;
     border-radius: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 5rem;
+    gap: 2rem;
     justify-items: center;
     align-items: center;
     margin: auto;
@@ -53,19 +74,56 @@
       width: 75%;
     }
 
+    @media only screen and (max-width: $bp-md-1-2) {
+      width: 85%;
+    }
+
+    @media only screen and (max-width: $bp-md-2) {
+      width: 95%;
+    }
+
+    @media only screen and (max-width: $bp-md-2-2) {
+      height: 55rem;
+      margin: 10rem;
+    }
+
+    @media only screen and (max-width: $bp-md-2-2) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      margin-top: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-sm-2) {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+
+    @media only screen and (max-width: $bp-sm-3) {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      width: 75%;
+    }
+
     .item {
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 20rem;
-      height: 20rem;
+      width: 15rem;
+      height: 15rem;
       -webkit-shape-outside: circle(50% at 50% 50%);
       shape-outside: circle(50% at 50% 50%);
       -webkit-clip-path: circle(50% at 50% 50%);
       clip-path: circle(50% at 50% 50%);
       position: relative;
       overflow-x: visible !important;
+
+      @media only screen and (max-width: $bp-md-2-2) {
+        width: 12rem;
+        height: 12rem;
+      }
+
+      @media only screen and (max-width: $bp-sm-3) {
+        width: 20rem;
+        height: 20rem;
+      }
 
       img {
         width: 100%;
@@ -85,6 +143,14 @@
         text-align: center;
         opacity: 0;
         transition: $transition-2;
+
+        @media only screen and (max-width: $bp-md-2-2) {
+          font-size: 1.2rem;
+        }
+
+        @media only screen and (max-width: $bp-sm-3) {
+          font-size: 2rem;
+        }
       }
 
       &:hover figcaption {

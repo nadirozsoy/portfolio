@@ -65,9 +65,11 @@ export default function Portfolio() {
             </ul>
             <div className="container">
                 {content.map((d) => (
-                    <motion.div animate={{ rotate: 360 }}
+                    <motion.div
+                        animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 5 }}
-                        key={d.id} className="item">
+                        key={d.id}
+                        className="item">
                         <img src={d.img} alt="" />
                         <figcaption>{d.title}</figcaption>
                     </motion.div>

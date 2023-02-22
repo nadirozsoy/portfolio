@@ -22,10 +22,33 @@
       height: calc(100vh - 7rem);
       scroll-snap-align: start;
 
+      &:nth-child(1) {
+        @media only screen and (max-width: $bp-md-1-2) {
+          // height: auto;
+          // margin-bottom: 10rem;
+        }
+      }
+
+      &:nth-child(2) {
+        @media only screen and (max-width: $bp-md-1) {
+          height: 75rem;
+          margin-bottom: 10rem;
+          box-shadow: $shadow-1;
+        }
+
+        @media only screen and (max-width: $bp-md-2-2) {
+          height: 85rem;
+        }
+      }
+
       &:nth-child(3) {
         @media only screen and (max-width: $bp-md-1-2) {
           height: 75rem;
           margin-bottom: 10rem;
+        }
+
+        @media only screen and (max-width: $bp-md-2-2) {
+          height: 60rem;
         }
       }
 

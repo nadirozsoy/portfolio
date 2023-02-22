@@ -5,9 +5,6 @@
   align-items: center;
   position: relative;
 
-  @media only screen and (max-width: $bp-md-1-2) {
-  }
-
   .arrow {
     height: 5rem;
     position: absolute;
@@ -29,6 +26,10 @@
       @media only screen and (max-width: $bp-sm-2) {
         left: 5rem;
       }
+
+      @media only screen and (max-width: $bp-md-2-2) {
+        top: 52rem;
+      }
     }
 
     &.right {
@@ -45,6 +46,10 @@
 
       @media only screen and (max-width: $bp-sm-2) {
         right: 5rem;
+      }
+
+      @media only screen and (max-width: $bp-md-2-2) {
+        top: 52rem;
       }
     }
   }
