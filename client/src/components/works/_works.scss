@@ -5,6 +5,9 @@
   align-items: center;
   position: relative;
 
+  @media only screen and (max-width: $bp-md-1-2) {
+  }
+
   .arrow {
     height: 5rem;
     position: absolute;
@@ -13,10 +16,36 @@
     &.left {
       left: 10rem;
       transform: rotate(-180deg);
+
+      @media only screen and (max-width: $bp-md-1-2) {
+        left: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-sm-1) {
+        left: 20rem;
+        top: 65rem;
+      }
+
+      @media only screen and (max-width: $bp-sm-2) {
+        left: 5rem;
+      }
     }
 
     &.right {
       right: 10rem;
+
+      @media only screen and (max-width: $bp-md-1-2) {
+        right: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-sm-1) {
+        right: 20rem;
+        top: 65rem;
+      }
+
+      @media only screen and (max-width: $bp-sm-2) {
+        right: 5rem;
+      }
     }
   }
 
@@ -43,6 +72,14 @@
         background-color: $color-secondary;
         box-shadow: $shadow-1;
 
+        @media only screen and (max-width: $bp-sm-2) {
+          width: 55rem;
+        }
+
+        @media only screen and (max-width: $bp-sm-3) {
+          width: 38rem;
+        }
+
         .left {
           flex: 4;
           height: 80%;
@@ -57,6 +94,10 @@
             flex-direction: column;
             justify-content: space-between;
             color: #fff;
+
+            @media only screen and (max-width: $bp-sm-2) {
+              align-items: center;
+            }
 
             .imgContainer {
               width: 4rem;
@@ -74,10 +115,18 @@
 
             h2 {
               font-size: 2rem;
+
+              @media only screen and (max-width: $bp-sm-3) {
+                font-size: 1.5rem;
+              }
             }
 
             p {
               font-size: 1.3rem;
+
+              @media only screen and (max-width: $bp-sm-3) {
+                font-size: 1.1rem;
+              }
             }
 
             span {
@@ -100,6 +149,12 @@
           img {
             width: 40rem;
             transform: rotate(-10deg);
+
+            @media only screen and (max-width: $bp-sm-2) {
+              height: 40rem;
+              transform: rotate(0);
+              width: 30rem;
+            }
           }
         }
       }
