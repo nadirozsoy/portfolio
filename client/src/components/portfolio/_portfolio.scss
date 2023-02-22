@@ -49,6 +49,10 @@
     margin: auto;
     box-shadow: $shadow-1;
 
+    @media only screen and (max-width: $bp-xl-1) {
+      width: 75%;
+    }
+
     .item {
       border-radius: 20px;
       display: flex;
