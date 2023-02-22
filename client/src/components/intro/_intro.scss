@@ -1,4 +1,9 @@
 .intro {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary,
+    rgba($thumbBG-hover, 0.2)
+  );
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -37,10 +42,12 @@
       h1 {
         font-size: 6rem;
         margin: 1rem 0;
+        padding: 2rem 0;
         text-shadow: $shadow-2;
       }
 
       h2 {
+        // padding: 2rem 0;
         font-size: 3.5rem;
       }
 
@@ -49,16 +56,15 @@
       }
 
       span {
-        color: $color-primary;
-        text-shadow: $shadow-2;
+        color: #fff;
       }
     }
 
     a {
       margin-left: 20%;
       display: inline-block;
-      width: 3rem;
-      height: 3rem;
+      width: 5rem;
+      height: 5rem;
       animation: blink 1.5s infinite;
       background-color: $color-primary;
       -webkit-mask-image: url(../../../public/assets/img/down.png);
