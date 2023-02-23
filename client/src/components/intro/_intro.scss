@@ -70,6 +70,10 @@
         padding-left: 0;
       }
 
+      @media only screen and (max-width: $bp-sm-2) {
+        width: 30rem;
+      }
+
       h1 {
         font-size: 6rem;
         margin: 1rem 0;
