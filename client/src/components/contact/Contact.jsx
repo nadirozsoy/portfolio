@@ -20,7 +20,7 @@ export default function Contact() {
         e.preventDefault()
         if (message && validateEmail(email)) {
             setIsUploading(true)
-            const { data, error } = await supabase.from("contact")
+            await supabase.from("contact")
                 .insert([{ email, message }])
                 .select()
 
@@ -50,12 +50,12 @@ export default function Contact() {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        class="form__input"
+                        className="form__input"
                         placeholder="Email adress"
                         id="email"
                         disabled={isUploading}
                         required />
-                    <label for="email" class="form__label">Email adress</label>
+                    <label htmlFor='email' className="form__label">Email adress</label>
                     <textarea
                         placeholder='Message...'
                         value={message}
@@ -64,7 +64,7 @@ export default function Contact() {
                         cols="15"
                         rows="15" ></textarea>
                     <button disabled={isUploading}>Send</button>
-                    {messageInfo ? <motion.span animate={{ scale: 1.5 }}>Thanks, I'll reply ASAP :)</motion.span> : null}
+                    {messageInfo && <motion.span animate={{ scale: 1.5 }}>Thanks, I'll reply ASAP :)</motion.span>}
                 </form>
             </div>
         </div>
